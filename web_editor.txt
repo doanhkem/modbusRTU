@@ -1,0 +1,11 @@
+version: '2'
+services:
+  zero:
+    image: doanhnguyen01/ziot:modbusRTU
+    restart: always
+    volumes:
+      - zero-volume:/etc/modbusRTU/
+    devices:
+      - "/dev/ttyS2:/dev/ttyS2" 
+volumes:
+  zero-volume:
